@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br><br>");    
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var anoAtual = parseInt(prompt("Digite o ano atual."));
+    var anoDeNascimentoPai = parseInt(prompt("Digite o ano de nascimento do seu pai."));
+    var anoDeNascimentoMae = parseInt(prompt("Digite o ano de nascimento da sua mãe."));
+    var anoDeNascimentoFilho = parseInt(prompt("Digite o seu ano de nascimento."));
+    var idadePai = anoAtual - anoDeNascimentoPai;
+    var idadeMae = anoAtual - anoDeNascimentoMae;
+    var idadeFilho = anoAtual - anoDeNascimentoFilho;
+    var mediaDeIdades = (idadePai + idadeMae + idadeFilho) / 3;
+
+    mostra("A idade do seu pai é " + idadePai + " anos.");
+    mostra("A idade da sua mãe é " + idadeMae + " anos.");
+    mostra("Sua idade é " + idadeFilho + " anos.");
+    mostra("A média de idades é " + Math.round(mediaDeIdades) + " anos.");
+</script>
